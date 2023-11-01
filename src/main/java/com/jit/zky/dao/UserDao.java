@@ -16,4 +16,11 @@ public class UserDao {
                 user.getSex(), user.getState(), user.getCode());
         return row;
     }
+
+    public void active(String activeCode) throws SQLException {
+        QueryRunner runner = new QueryRunner(DataSourceUtil.getDataSource());
+        String sql = "update user set state = 1 where code = ? ";
+        runner.update(sql, activeCode);
+    }
+
 }

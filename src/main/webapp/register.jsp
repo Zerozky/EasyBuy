@@ -163,6 +163,56 @@
             </div>
         </div>
     </form>
+    <style type="text/css">
+        .reg-form .cell label.error {
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#registForm").validate({
+                rules: {
+                    "username": {//标签名字
+                        "required": true
+                    },
+                    "password": {
+                        "required": true,
+                        "rangelength": [6, 12]
+                    },
+                    "name": {
+                        "required": true
+                    },
+                    "telephone": {
+                        "required": true
+                    },
+                    "email": {
+                        "required": true,
+                        "email": true
+                    }
+                },
+                messages: {
+                    "username": {
+                        "required": "用户名不能为空"
+                    },
+                    "password": {
+                        "required": "密码不能为空",
+                        "rangelength": "密码长度在6-12位"
+                    },
+                    "name": {
+                        "required": "真实姓名不能为空"
+                    },
+                    "telephone": {
+                        "required": "电话不能为空"
+                    },
+                    "email": {
+                        "required": "邮箱不能为空",
+                        "email": "邮箱格式不正确"
+                    }
+                }
+            });
+        })
+    </script>
 </div>
 </body>
 </html>

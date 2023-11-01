@@ -12,6 +12,13 @@ public class User {
     private int state;
     private String code;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "state=" + state +
+                '}';
+    }
+
     public String getUid() {
         return uid;
     }
@@ -92,3 +99,4 @@ public class User {
         this.code = code;
     }
 }
+
