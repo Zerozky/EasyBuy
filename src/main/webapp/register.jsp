@@ -169,12 +169,14 @@
             color: red;
         }
     </style>
+    <script src="js/jquery.validate.min.js"></script>
     <script>
         $(function () {
             $("#registForm").validate({
                 rules: {
                     "username": {//标签名字
-                        "required": true
+                        "required": true,
+                        "checkUsername": true
                     },
                     "password": {
                         "required": true,
@@ -193,7 +195,8 @@
                 },
                 messages: {
                     "username": {
-                        "required": "用户名不能为空"
+                        "required": "用户名不能为空",
+                        "checkUsername": "该用户已存在"
                     },
                     "password": {
                         "required": "密码不能为空",
@@ -212,6 +215,30 @@
                 }
             });
         })
+    </script>
+    <script>
+        $.validator.addMethod(
+            "checkUsername",//自定义校验规则的名称
+            function (value, element, params) {//自定义校验规则的实现
+                //value)表单元素值
+                //element)校验的元素对象
+                //params)校验规则输入的参数
+                let flag = true;
+                //发送一个Ajax，到服务器进行验证用户存在
+                $.ajax({
+                    "async": false,//同步操作
+                    "url": "${pageContext.request.contextPath}/checkUsername",
+                    "type": "POST",
+                    "data": {"username": value},
+                    "dataType": "json",
+                    "success": function (data) {
+                        flag = data.isExist;//true--存在  false--不存在
+                    }
+                });
+                //需要返回值 false----该校验器校验失败    true---校验通过
+                return !flag;
+            }
+        )
     </script>
 </div>
 </body>

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-import com.jit.zky.user.User;
+import com.jit.zky.entity.User;
 import com.jit.zky.utils.CommonUtil;
 import com.jit.zky.utils.MailUtil;
 import org.apache.commons.beanutils.BeanUtils;

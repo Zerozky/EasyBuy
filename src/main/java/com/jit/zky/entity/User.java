@@ -1,4 +1,4 @@
-package com.jit.zky.user;
+package com.jit.zky.entity;
 
 public class User {
     private String uid;
