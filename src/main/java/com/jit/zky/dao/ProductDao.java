@@ -1,9 +1,11 @@
 package com.jit.zky.dao;
 
+import com.jit.zky.entity.Category;
 import com.jit.zky.entity.Product;
 import com.jit.zky.utils.DataSourceUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.testng.annotations.Test;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -27,4 +29,9 @@ public class ProductDao {
         return cList;
     }
 
+    public List<Category> findAllCategory() throws SQLException {
+        QueryRunner runner = new QueryRunner(DataSourceUtil.getDataSource());
+        String sql = " select * from category order by cast(cid as signed)";
+        return runner.query(sql, new BeanListHandler<Category>(Category.class));
+    }
 }

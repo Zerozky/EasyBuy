@@ -68,205 +68,15 @@
     </div>
 
     <!-- 1F 服饰百货 -->
-    <div class="container-fluid">
-        <div class="col-md-12">
-            <h3>1F服饰百货</h3>
-        </div>
-        <div class="col-md-3"
-             style="hight: 400px; width: 360px; padding: 0px 0px;">
-            <img src="img/go_left/1.jpg"
-                 style="height: 420px; display: inline-block;"/>
-        </div>
-        <div class="col-md-8" id="floor1">
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=41&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20010.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=41&cid=1&currentPage=1"
-                       style="color: #666">草色深深毛衣</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;1469</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=42&cid=1&currentPage=1"><img
-                        src="products/1/400/cs10010.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=42&cid=1&currentPage=1"
-                       style="color: #666">粉红女郎</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;2699</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=94&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20001.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=94&cid=1&currentPage=1"
-                       style="color: #666">时尚服装线衣披风</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;1299</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=95&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20002.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=95&cid=1&currentPage=1"
-                       style="color: #666">时尚服装秋季风衣</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;2599</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=98&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20005.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=98&cid=1&currentPage=1"
-                       style="color: #666">时尚服装大红方格外套</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;4288</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=99&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20006.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=99&cid=1&currentPage=1"
-                       style="color: #666">时尚服装粉色毛衣</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;1469</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=100&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20007.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=100&cid=1&currentPage=1"
-                       style="color: #666">时尚服装印花小鹿</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;2699</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=102&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20009.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=102&cid=1&currentPage=1"
-                       style="color: #666">时尚服装sonim 摆裙</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;1699</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=103&cid=1&currentPage=1"><img
-                        src="products/1/400/cs20007.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=103&cid=1&currentPage=1"
-                       style="color: #666">时尚服装努比亚精英</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;3888</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=31&cid=1&currentPage=1"><img
-                        src="products/1/400/cs10001.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=31&cid=1&currentPage=1"
-                       style="color: #666">线衣披风</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;1299</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=32&cid=1&currentPage=1"><img
-                        src="products/1/400/cs10002.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=32&cid=1&currentPage=1"
-                       style="color: #666">秋季风衣</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;2599</font>
-                </p>
-            </div>
-            <div class="col-md-2"
-                 style="text-align: center; height: 200px; padding: 10px 0px;">
-                <a
-                        href="/ngshop/product?method=productInfo&pid=37&cid=1&currentPage=1"><img
-                        src="products/1/400/cs10005.jpg"
-                        style="display: inline-block; width: 150px; height: 150px;"></a>
-                <p
-                        style="height: 22px; width: 170px; overflow: hidden; text-align: center; margin: auto;">
-                    <a href="product?method=productInfo&pid=37&cid=1&currentPage=1"
-                       style="color: #666">大红方格外套</a>
-                </p>
-                <p>
-                    <font color="#E4393C" style="font-size: 16px">&yen;4288</font>
-                </p>
-            </div>
-        </div>
-        <div class="col-md-1" style="hight: 400px; padding: 0px 0px;">
-            <img src="img/go_right/1.jpg"
-                 style="height: 420px; width: 190px; display: inline-block;"/>
-        </div>
-    </div>
+
     <!-- 分割条 -->
     <div class="container-fluid"
          style="background: #b6232b; height: 10px;"></div>
+</div>
+
+<!-- 引入footer.jsp -->
+<div class="container-fliud">
+    <jsp:include page="/footer.jsp"></jsp:include>
 </div>
 
 
@@ -284,9 +94,11 @@
                         index_cont += '<div class="col-md-3" style="hight: 400px; width: 360px; padding: 0px 0px;"> <img src="' + pcode.param3 + '" style="height: 420px; display: inline-block;" /></div>';
                         index_cont += '<div class="col-md-8" id="' + pcode.param7 + '"></div>';
                         index_cont += '<div class="col-md-1" style="hight: 400px; padding: 0px 0px;"> <img src="' + pcode.param5 + '" style="height: 420px; width: 190px; display: inline-block;" /></div>';
+                        index_cont += '<div class="container-fluid" style="background: #b6232b; height: 10px;"></div>';
                         index_cont += '</div>';
                     }
                     $("#index_cont").append(index_cont);
+                    hot_product_load();
                 }, "json");
         }
 
@@ -300,7 +112,7 @@
     function hot_product_load() {
         $.post("${pageContext.request.contextPath}/hotproduct",
             function (datas) {
-                for (var index = 0; index < datas.length; index++) {
+                for (let index = 0; index < datas.length; index++) {
                     var data = datas[index]
                     var floorNo = data.floorNo;//获取楼层
                     var hotProducts = data.hotProducts;//获取楼层对应的数据
@@ -325,9 +137,6 @@
     }
 </script>
 
-<!-- 引入footer.jsp -->
-<div class="container-fliud">
-    <jsp:include page="/footer.jsp"></jsp:include>
-</div>
+
 </body>
 </html>

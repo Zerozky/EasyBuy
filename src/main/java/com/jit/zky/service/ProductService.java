@@ -2,14 +2,17 @@ package com.jit.zky.service;
 
 import com.jit.zky.dao.PcodeDao;
 import com.jit.zky.dao.ProductDao;
+import com.jit.zky.entity.Category;
+import com.jit.zky.entity.FloorVo;
 import com.jit.zky.entity.Pcode;
 import com.jit.zky.entity.Product;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductService {
-    private final PcodeDao dao = new PcodeDao();
+    private final PcodeService dao = new PcodeService();
     private final ProductDao pdao = new ProductDao();
     /**
      * 查询各楼层热门商品信息
@@ -31,32 +34,16 @@ public class ProductService {
         }
         return floorVos;
     }
-    /**
-     * 返回楼层对应商品列表信息
-     * @ClassName FloorVo
-     * @author 86159清风明月
-     * @date 2022年11月14日 上午4:31:57
-     */
-    public class FloorVo
-    {
-        private String floorNo;
-        private List<Product> hotProducts;
 
-        public String getFloorNo() {
-            return floorNo;
+    public List<Category> navigationBar() {
+        List<Category> categoryList = null;
+        try {
+            categoryList = pdao.findAllCategory();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-
-        public void setFloorNo(String floorNo) {
-            this.floorNo = floorNo;
-        }
-
-        public List<Product> getHotProducts() {
-            return hotProducts;
-        }
-
-        public void setHotProducts(List<Product> hotProducts) {
-            this.hotProducts = hotProducts;
-        }
+        return categoryList;
     }
 
 }

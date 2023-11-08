@@ -1,7 +1,9 @@
 package com.jit.zky.servlet.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.jit.zky.entity.FloorVo;
 import com.jit.zky.service.ProductService;
+import org.testng.annotations.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,14 +21,15 @@ import java.util.List;
  * @ClassName ProductServlet
  * @date 2022年11月14日 上午4:52:02
  */
-@WebServlet("/product")
+@WebServlet("/hotproduct")
 public class ProductServlet extends HttpServlet {
     private ProductService service = new ProductService();
     private int pagesize = 12;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<ProductService.FloorVo> hotProducts = service.findeFloorsHotProducts(0, pagesize);
+        resp.setContentType("text/html; charset=UTF-8");
+        List<FloorVo> hotProducts = service.findeFloorsHotProducts(0, pagesize);
         String jsonString = JSON.toJSONString(hotProducts);
         resp.getWriter().write(jsonString);
     }

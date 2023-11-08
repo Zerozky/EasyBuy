@@ -8,11 +8,27 @@ public class Product {
     private double market_price;
     private double shop_price;
     private String pimage;
-    private Date pdate;
+    private String pdate;
     private int is_hot;//0--非热门商品  1-热门商品
     private String pdesc;
     private int pflag;//是否上下架
     private Category category;//商品的类别,上层面向对象
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "pid='" + pid + '\'' +
+                ", pname='" + pname + '\'' +
+                ", market_price=" + market_price +
+                ", shop_price=" + shop_price +
+                ", pimage='" + pimage + '\'' +
+                ", pdate=" + pdate +
+                ", is_hot=" + is_hot +
+                ", pdesc='" + pdesc + '\'' +
+                ", pflag=" + pflag +
+                ", category=" + category +
+                '}';
+    }
 
     public String getPid() {
         return pid;
@@ -54,11 +70,11 @@ public class Product {
         this.pimage = pimage;
     }
 
-    public Date getPdate() {
+    public String getPdate() {
         return pdate;
     }
 
-    public void setPdate(Date pdate) {
+    public void setPdate(String pdate) {
         this.pdate = pdate;
     }
 
