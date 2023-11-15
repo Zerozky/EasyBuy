@@ -1,7 +1,5 @@
 package com.jit.zky.entity;
 
-import java.util.Date;
-
 public class Product {
     private String pid;
     private String pname;

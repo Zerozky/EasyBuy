@@ -7,7 +7,6 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
-import org.testng.annotations.Test;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -15,11 +14,6 @@ import java.util.List;
 public class ProductDao {
     private QueryRunner runner = new QueryRunner(DataSourceUtil.getDataSource());
 
-    /**
-     * 根据商品类别查询热门商品信息
-     *
-     * @return
-     */
     public List<Product> findHotProductListByPage(String cid, int start, int pagesize) {
         List<Product> cList = null;
         String sql = " select * from product a where a.is_hot = 1 and a.cid = ? order by pdate desc limit ?,?";
@@ -37,30 +31,13 @@ public class ProductDao {
         return runner.query(sql, new BeanListHandler<Category>(Category.class));
     }
 
-    /**
-     *
-     * @Title: getCount
-     * @Description: 获取所选类别下所有商品的个数
-     * @param cid:类别ID
-     * @return
-     * @throws SQLException
-     */
     public int getCount(String cid) throws SQLException {
         QueryRunner runner = new QueryRunner(DataSourceUtil.getDataSource());
         String sql = " select count(*) from product where cid=?";
         Long row = (Long)runner.query(sql, new ScalarHandler(), cid);
         return row.intValue();
     }
-    /**
-     *
-     * @Title: findProductListByPage
-     * @Description: 根据类别ID,查找的页码检索相应的商品列表
-     * @param cid
-     * @param start
-     * @param count
-     * @return
-     * @throws SQLException
-     */
+
     public List<Product> findProductListByPage(String cid,int start,int count) throws SQLException {
         QueryRunner runner = new QueryRunner(DataSourceUtil.getDataSource());
         String sql = " select * from product where cid = ? limit ?,?";

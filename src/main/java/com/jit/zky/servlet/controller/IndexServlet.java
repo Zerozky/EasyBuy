@@ -12,13 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * 加载楼层信息
- *
- * @author 86159
- * @ClassName IndexServlet
- * @date 2022年11月14日 上午4:08:40
- */
 @WebServlet("/indexFloor")
 public class IndexServlet extends HttpServlet {
     private PcodeService service = new PcodeService();

@@ -12,13 +12,6 @@ public class ProductService {
     private final PcodeService dao = new PcodeService();
     private final ProductDao pdao = new ProductDao();
 
-    /**
-     * 查询各楼层热门商品信息
-     *
-     * @param start
-     * @param pagesize
-     * @return
-     */
     public List<FloorVo> findeFloorsHotProducts(int start, int pagesize) {
         List<Pcode> pcodeList = dao.findPcodeListByCodeType("4");
         List<FloorVo> floorVos = new ArrayList<FloorVo>();

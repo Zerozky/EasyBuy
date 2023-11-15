@@ -13,14 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-
-/**
- * 获取各楼层热门商品信息
- *
- * @author 86159清风明月
- * @ClassName ProductServlet
- * @date 2022年11月14日 上午4:52:02
- */
 @WebServlet("/hotproduct")
 public class ProductServlet extends HttpServlet {
     private ProductService service = new ProductService();
