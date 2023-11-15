@@ -21,6 +21,7 @@ public class ProductInfoServlet extends HttpServlet {
         String pid = request.getParameter("pid");
         String cid = request.getParameter("cid");
         String currentPage = request.getParameter("currentPage");
+
         //根据商品id查找该商品对象
         ProductService service = new ProductService();
         Product product = service.findProductById(pid);
