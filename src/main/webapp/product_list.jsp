@@ -115,15 +115,15 @@
 
     <div style="overflow: hidden;">
         <ul style="list-style: none;">
-            <c:forEach items="${historyList }" var="history">
+            <c:forEach items="${historyList }" var="historyList">
                 <li style="width: 150px; height: 216px; float: left; margin: 0 8px 0 0; padding: 0 18px 15px; text-align: center;">
-                    <img src="${pageContext.request.contextPath }/${history.pimage}" width="130px" height="130px"/>
+                    <img src="${pageContext.request.contextPath }/${historyList.pimage}" width="130px" height="130px"/>
                 </li>
             </c:forEach>
-<%--            <li--%>
-<%--                    style="width: 150px; height: 216px; float: left; margin: 0 8px 0 0; padding: 0 18px 15px; text-align: center;">--%>
-<%--                <img--%>
-<%--                        src="products/1/cs10001.jpg" width="130px" height="130px"/></li>--%>
+            <%--            <li--%>
+            <%--                    style="width: 150px; height: 216px; float: left; margin: 0 8px 0 0; padding: 0 18px 15px; text-align: center;">--%>
+            <%--                <img--%>
+            <%--                        src="products/1/cs10001.jpg" width="130px" height="130px"/></li>--%>
         </ul>
 
     </div>

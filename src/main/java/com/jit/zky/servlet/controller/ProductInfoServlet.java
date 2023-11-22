@@ -28,7 +28,6 @@ public class ProductInfoServlet extends HttpServlet {
         request.setAttribute("cid", cid);
         request.setAttribute("currentPage", currentPage);
         request.setAttribute("product", product);
-        request.getRequestDispatcher("/product_info.jsp").forward(request, response);
 
         //使用cookie技术保存浏览历史记录
         //1.从cookie中读取是否有名字是pids的值
@@ -38,6 +37,7 @@ public class ProductInfoServlet extends HttpServlet {
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 //判断是否是Pids这个cookie
+                System.out.println("cookie = " + cookie.getName());
                 if ("pids".equals(cookie.getName())) {
                     //有名为pids这个cookie,则获取其存储的值,
 					/*每次在原值的前面拼接这一次访问的pid
@@ -51,7 +51,7 @@ public class ProductInfoServlet extends HttpServlet {
                     pids = cookie.getValue();//1,2,3
 
                     //获取到cookie值后,处理,将字符串转为数组
-                    String[] strs = pids.split(",");//{1,2,3}
+                    String[] strs = pids.split("&");//{1,2,3}
                     //将数组转换为LinkedList操作更简便,先将数组转成List集合,再转成LinkedList集合
                     List<String> arrList = Arrays.asList(strs);
                     LinkedList<String> list = new LinkedList<>(arrList);
@@ -63,7 +63,7 @@ public class ProductInfoServlet extends HttpServlet {
                     //再将集合转为String
                     for (int i = 0; i < list.size() && i < 7; i++) {
                         sb.append(list.get(i));
-                        sb.append(",");
+                        sb.append("&");
                     }
 
                     pids = sb.substring(0, sb.length() - 1);
@@ -72,9 +72,10 @@ public class ProductInfoServlet extends HttpServlet {
             }
         }
         //创建Cookie,将新拼接好的pids携带回客户端
+        System.out.println("pids = " + pids);
         Cookie c = new Cookie("pids", pids);
         response.addCookie(c);
-
+        request.getRequestDispatcher("/product_info.jsp").forward(request, response);
     }
 
 }

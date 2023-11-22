@@ -1,7 +1,7 @@
 package com.jit.zky.entity;
 
 public class Product {
-    private String pid;
+    private int pid;
     private String pname;
     private double market_price;
     private double shop_price;
@@ -11,6 +11,7 @@ public class Product {
     private String pdesc;
     private int pflag;//是否上下架
     private Category category;//商品的类别,上层面向对象
+    private String bigimage;
 
     @Override
     public String toString() {
@@ -28,11 +29,11 @@ public class Product {
                 '}';
     }
 
-    public String getPid() {
+    public int getPid() {
         return pid;
     }
 
-    public void setPid(String pid) {
+    public void setPid(int pid) {
         this.pid = pid;
     }
 
@@ -106,5 +107,13 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getBigimage() {
+        return bigimage;
+    }
+
+    public void setBigimage(String bigimage) {
+        this.bigimage = bigimage;
     }
 }
