@@ -89,7 +89,7 @@
 
             <div>
                 <img
-                        src="${product.pimage}" style=" width: 1170px; padding: 0px 0px; margin: 0px 0px;">
+                        src="${product.bigimage}" style=" width: 1170px; padding: 0px 0px; margin: 0px 0px;">
             </div>
 
             <div
