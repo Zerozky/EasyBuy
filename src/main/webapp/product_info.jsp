@@ -32,7 +32,7 @@
     <div class="row">
         <div
                 style="border: 1px solid #e4e4e4; margin-bottom: 10px; margin: 0 auto; padding: 10px; margin-bottom: 10px;">
-            <a href="${pageContext.request.contextPath}/productListByCid?cid=${cid}&currentPage=${currentPage}">&lt;&nbsp;&nbsp;返回</a>
+            <a href="${pageContext.request.contextPath}/product?method=productListByCid&cid=${cid}&currentPage=${currentPage}">&lt;&nbsp;&nbsp;返回</a>
         </div>
 
         <div style="margin: 0 auto;">

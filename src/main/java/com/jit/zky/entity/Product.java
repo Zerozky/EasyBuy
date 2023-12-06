@@ -2,6 +2,7 @@ package com.jit.zky.entity;
 
 public class Product {
     private int pid;
+    private String cid;
     private String pname;
     private double market_price;
     private double shop_price;
@@ -27,6 +28,14 @@ public class Product {
                 ", pflag=" + pflag +
                 ", category=" + category +
                 '}';
+    }
+
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
     }
 
     public int getPid() {

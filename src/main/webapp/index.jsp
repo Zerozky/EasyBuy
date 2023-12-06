@@ -84,7 +84,7 @@
     $(function () {
         //加载楼层信息
         function floor_load() {
-            $.post("${pageContext.request.contextPath}/indexFloor",
+            $.post("${pageContext.request.contextPath}/product?method=indexFloor",
                 function (data) {
                     var index_cont = ''
                     for (var i = 0; i < data.length; i++) {
@@ -110,7 +110,7 @@
 <script type="text/javascript">
     //加载热门商品列表
     function hot_product_load() {
-        $.post("${pageContext.request.contextPath}/hotproduct",
+        $.post("${pageContext.request.contextPath}/product?method=hotproduct",
             function (datas) {
                 for (let index = 0; index < datas.length; index++) {
                     var data = datas[index]

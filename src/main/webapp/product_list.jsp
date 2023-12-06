@@ -44,13 +44,13 @@
     </div>
     <c:forEach items="${pageBean.list }" var="product">
         <div class="col-md-2">
-            <a href="${pageContext.request.contextPath}/productInfo?pid=${product.pid}&cid=${cid}&currentPage=${pageBean.currentPage}">
+            <a href="${pageContext.request.contextPath}/product?method=productInfo&pid=${product.pid}&cid=${cid}&currentPage=${pageBean.currentPage}">
                 <img src="${product.pimage}"
                      width="170" height="170"
                      style="display: inline-block;">
             </a>
             <p style="height: 22px; width: 170px;margin:auto;text-align:center; overflow: hidden;">
-                <a href="${pageContext.request.contextPath}/productInfo?pid=${product.pid}&cid=${cid}&currentPage=${pageBean.currentPage}"
+                <a href="${pageContext.request.contextPath}/product?method=productInfo&pid=${product.pid}&cid=${cid}&currentPage=${pageBean.currentPage}"
                    style='color: green'>${product.pname}</a>
             </p>
             <p style="height: 22px; width: 170px;margin:auto;text-align:center; overflow: hidden;">
@@ -70,7 +70,7 @@
             </c:when>
             <c:otherwise>
                 <li>
-                    <a href="${pageContext.request.contextPath}/productListByCid?cid=${param.cid}&currentPage=${pageBean.currentPage-1}"
+                    <a href="${pageContext.request.contextPath}/product?method=productListByCid&cid=${param.cid}&currentPage=${pageBean.currentPage-1}"
                        aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
             </c:otherwise>
         </c:choose>
@@ -83,7 +83,7 @@
                 </c:when>
                 <c:otherwise>
                     <li>
-                        <a href="${pageContext.request.contextPath}/productListByCid?cid=${param.cid}&currentPage=${page}">${page}</a>
+                        <a href="${pageContext.request.contextPath}/product?method=productListByCid&cid=${param.cid}&currentPage=${page}">${page}</a>
                     </li>
                 </c:otherwise>
             </c:choose>
@@ -95,7 +95,7 @@
             </c:when>
             <c:otherwise>
                 <li>
-                    <a href="${pageContext.request.contextPath}/productListByCid?cid=${param.cid}&currentPage=${pageBean.currentPage+1}"
+                    <a href="${pageContext.request.contextPath}/product?method=productListByCid&cid=${param.cid}&currentPage=${pageBean.currentPage+1}"
                        aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
             </c:otherwise>
         </c:choose>
