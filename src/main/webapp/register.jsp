@@ -118,7 +118,7 @@
     </script>
 
 
-    <form id="registForm" action="${pageContext.request.contextPath}/user?method=register" method="post">
+    <form id="registForm" action="${pageContext.request.contextPath}/user?method=register" method="post" accept-charset="UTF-8">
         <div class="container_">
             <div class="register-box">
                 <div class="reg-slogan">

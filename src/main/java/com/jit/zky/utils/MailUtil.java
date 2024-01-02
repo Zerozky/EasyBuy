@@ -13,12 +13,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMessage.RecipientType;
 
-/**
- * @ClassName: MailUtils
- * @Description: 发送邮件辅助类
- * @date 2017年12月12日 下午4:17:25
- * Company www.igeekhome.com
- */
 public class MailUtil {
     /**
      * @param email：接收邮件的地址

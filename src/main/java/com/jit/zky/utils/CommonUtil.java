@@ -7,12 +7,6 @@ import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 
-/**
- * java常用工具类
- * @ClassName CommonUtil
- * @author 86159
- * @date 2022年7月24日 下午4:45:20
- */
 public class CommonUtil
 {
 

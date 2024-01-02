@@ -19,9 +19,9 @@ import java.util.List;
 
 @WebServlet("/product")
 public class ProductServlet extends HttpServlet {
-    private ProductService productService = new ProductService();
-    private PcodeService pcodeService = new PcodeService();
-    private int pagesize = 12;
+    private final ProductService productService = new ProductService();
+    private final PcodeService pcodeService = new PcodeService();
+    private final int pagesize = 12;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -98,15 +98,6 @@ public class ProductServlet extends HttpServlet {
                 //判断是否是Pids这个cookie
                 System.out.println("cookie = " + cookie.getName());
                 if ("pids".equals(cookie.getName())) {
-                    //有名为pids这个cookie,则获取其存储的值,
-					/*每次在原值的前面拼接这一次访问的pid
-					原则是:1)将最新访问的放在最前面.
-						例如:如果获取的cookie值为 1,2,3 则商品访问顺序为先访问的3-->2-->1,
-						即最新一次访问商品ID是1
-						2)如果有重复商品,则先将字符串中重复的ID删除,再将该重复的放在最前面
-						例如:如果获取的cookie值为 1,2,3
-						该次访问的pid=2,则拼接完成后应该是2,1,3
-					 */
                     pids = cookie.getValue();//1,2,3
 
                     //获取到cookie值后,处理,将字符串转为数组
@@ -131,7 +122,6 @@ public class ProductServlet extends HttpServlet {
             }
         }
         //创建Cookie,将新拼接好的pids携带回客户端
-        System.out.println("pids = " + pids);
         Cookie c = new Cookie("pids", pids);
         response.addCookie(c);
         request.getRequestDispatcher("/product_info.jsp").forward(request, response);
@@ -170,7 +160,7 @@ public class ProductServlet extends HttpServlet {
                 }
             }
         }
-        System.out.println("historyList = " + historyList.toString());
+        System.out.println("historyList = " + historyList);
         request.setAttribute("historyList", historyList);
         request.getRequestDispatcher("/product_list.jsp").forward(request, response);
 

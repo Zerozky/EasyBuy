@@ -23,6 +23,7 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
         String methodName = req.getParameter("method");
         if ("register".equals(methodName)) {
             register(req, resp);
@@ -33,6 +34,7 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
         String methodName = req.getParameter("method");
         if ("checkUsername".equals(methodName)) {
             checkUsername(req, resp);
@@ -43,6 +45,7 @@ public class UserServlet extends HttpServlet {
 
     protected void register(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html;charset=utf-8");
         Map<String, String[]> properties = req.getParameterMap();
         User user = new User();
         try {
@@ -55,7 +58,6 @@ public class UserServlet extends HttpServlet {
         if (userService.regist(user)) {
             isSuccess = true;
         }
-//        resp.sendRedirect("login.jsp");
 
         if (isSuccess)//注册成功
         {
